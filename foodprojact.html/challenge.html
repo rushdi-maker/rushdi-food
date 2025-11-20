@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            width: 1400px;
+            height: 300PX;
+            background-color: rgb(26, 20, 202);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a{
+            justify-content: space-between;
+        }
+        input {
+            background-color: transparent;
+            color: white;
+            border: 1px solid rgb(255, 255, 255);
+            padding: 5px;
+            border-radius: 30px;
+            height: 30px;
+            width: 300px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        input::placeholder {
+            color: white;
+          
+        }
+         .B{
+            border: solid rgb(173, 164, 43);
+            width: 500px;
+            height: 30px;
+            margin: 0;
+         }
+         .search-fields {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+         }
+         h3 {
+            color: black;
+         }
+         .order-btn {
+         background-color: #4525c5;
+             color: #fff;
+                border: 1px solid rgb(255, 255, 255);
+                  padding: 5px;
+                 border-radius: 30px;
+                cursor: pointer;
+             transition: background-color 0.3s, transform 0.3s;
+            margin-top: 10px;
+            width: 500px;
+            height: 30px;
+            box-sizing: border-box;
+    }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <nav>
+    <a href="#" style="color: azure;">bookin.com</a>
+    <a href="#" style="color: aliceblue;">mad</a>
+    <label for="text"></label>
+    <input type="text" name="" id="text" placeholder="s'inscrire">
+    <input type="text" name="" id="" placeholder="se connecter">
+    <input type="text" name="" id="sejours" placeholder="sejours 🛏️">
+    <input type="text" name="" id="vols" placeholder="vols ✈️">
+
+      <H1 style="color: aliceblue; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-left: 20px;">Trouvez votre prochain séjour
+      <h3 style="color: aliceblue; margin-left: 20px;">Recherchez des offres sur des hôtels, des<br> hébergements indépendants et plus encore</h3>
+    </nav>
+    </div>
+    <div class="search-fields">
+        <h3 class="B" style="border: solid; color: gold;">🛏️ ou allez-vous? </h3>
+        <h3 class="B" style="border: solid;color: gold;"> 📅 date d'arrive - date de depart </h3>
+        <h3 class="B" style="border: solid;color: gold; color;"> 2 adultes. 0 enfant . 1 chambre</h3>
+    </div>
+
+    <div class="order-btn"><label for="modal-toggle">rechercher</label></div>
+</body>
+</html>

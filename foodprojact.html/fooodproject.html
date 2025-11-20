@@ -1,0 +1,1344 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Moderne</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    
+    
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #000000;
+      perspective: 1000px;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+      color: #ffffff;
+    }
+
+
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+
+    
+    nav {
+      background-color: transparent;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      text-decoration: none;
+    }
+    .logo {
+      flex-shrink: 0;
+      position: absolute;
+      left: 20px;
+    }
+    nav ul {
+      display: flex;
+      justify-content: space-around;
+      margin: 0;
+      width: 100%;
+      text-decoration: none;
+    }
+    nav li {
+      margin: 0 20px;
+      text-decoration: none;
+    }
+    nav a {
+      display: block;
+      padding: 15px 10px;
+      color: #CCCCCC;
+      text-decoration: none;
+      font-weight: 500;
+      font-style: italic;
+      transition: 0.3s;
+      border-radius: 8px;
+    }
+    a:hover {
+      color: #2E7D32;
+      text-decoration: none;
+      transform: scale(1.3);
+    }
+    .whatsapp-link {
+      color: #25ad25 !important;
+      font-size: 20px;
+      transition: transform 0.3s;
+    }
+    .whatsapp-emoji:hover {
+     
+      transform: scale(5);
+    }
+    .instagram-link img {
+      width: 30px;
+      height: 22px;
+      border-radius: 5px;
+      transition: transform 0.3s;
+    }
+    .instagram-link img:hover {
+      transform: scale(1.1);
+    }
+    h3{
+        color: #ffffff;
+        text-align: center;
+        font-style: italic;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    .card {
+      background: linear-gradient(to bottom, #FF0000, #FFFF00);
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      overflow: hidden;
+      width: 250px;
+      transition: transform 0.2s;
+      background-repeat: no-repeat;
+      height: 425px;
+      display: flex;
+      flex-direction: column;
+
+    }
+     .card:hover {
+      transform: scale(1.03);
+    }
+.card-content {
+      padding: 10px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-content p {
+    font-style: italic;
+      font-size: 14px;
+      color: #ffffff;
+      margin: 5px 0;
+    }
+    .price {
+      animation: fadeIn 1s ease-in-out;
+      font-weight: bold;
+      font-size: 16px;
+      color: #ffffff;
+      transition: transform 0.3s ease;
+    }
+    .price:hover {
+      transform: scale(1.1);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .order-btn {
+      background-color: #000000;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      margin-top: 10px;
+    }
+    .order-btn:hover {
+      background-color: #FFC107;
+      color: black;
+      animation: bounce 0.5s;
+      transform: scale(1.05);
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+
+    }
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+    .hello{
+  color: #ffffff;
+  text-align: justify;
+  font-style: italic;
+
+}
+
+    @media (max-width: 768px) {
+      .menu-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+      .card {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        min-height: 425px;
+      }
+      .card img {
+        height: auto;
+      }
+      .sub-cards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+      .sub-card {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        min-height: 425px;
+      }
+      .sub-card img {
+        height: auto;
+      }
+      .back-button {
+        position: static;
+        margin: 20px auto;
+        display: block;
+        width: auto;
+        right: auto;
+      }
+      nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        text-decoration: none;
+      }
+      nav li {
+        margin: 0;
+        flex: 1;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+    @media (max-width: 480px) {
+      .menu-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+      .card {
+        max-width: 100%;
+      }
+      .sub-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+      .sub-card {
+        max-width: 100%;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      nav li {
+        margin: 5px 0;
+      }
+      .logo {
+        position: static;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      nav {
+        flex-direction: column;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .card {
+        width: 280px;
+      }
+      .sub-card {
+        width: 280px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .menu-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .sub-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+  <style>
+   
+    .modal {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+      transition: opacity 1s ease, visibility 1s ease;
+    }
+    #modal-toggle:checked ~ .modal {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal-content {
+      background-color: #000000;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .form-container {
+      max-width: 500px;
+      width: 90%;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 15px;
+      font-style: italic;
+      background-image: url('https://i.pinimg.com/736x/9c/a2/f0/9ca2f060b65c185b83cd02addf357a05.jpg');
+      background-size: 100% 100%;
+      background-position: center;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    label, p {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      color: #ffffff;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #8a2525;
+      border-radius: 12px;
+      background-color: #333333;
+      color: #ffffff;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: #7b2a2a;
+      background-color: #e8e1e1;
+    }
+    input[type="submit"] {
+      background-color: #E53935;
+      color: #fff6f6;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 2s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #2E7D32;
+    }
+    #message {
+      font-style: italic;
+      border-radius: 15px;
+      border: 1px solid #999;
+      padding: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .logo{
+    width: 20px;
+      display:flex
+      
+      
+    
+    }
+    .chickenwraps-img{
+       /* transform: scaleY(1.4); */
+
+    }
+     .greekchicken-img{
+      /* transform: scaleY(1.4) */
+
+
+     }
+    .chickenwings-img{
+      /* transform: scaleY(1.4) */
+     }
+
+  
+    .sub-cards {
+      display: none;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 20px auto 0;
+      padding: 0;
+      align-items: stretch;
+    }
+    #margherita:checked ~ .menu-container {
+      display: none;
+    }
+    #margherita:checked ~ #margherita-sub {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    #taco:checked ~ .menu-container {
+      display: none;
+    }
+    #taco:checked ~ #taco-sub {
+      display: grid;
+    }
+    #burger:checked ~ .menu-container {
+      display: none;
+    }
+    #burger:checked ~ #burger-sub {
+      display: grid;
+    }
+    #skewers:checked ~ .menu-container {
+      display: none;
+    }
+    #skewers:checked ~ #skewers-sub {
+      display: grid;
+    }
+    #wraps:checked ~ .menu-container {
+      display: none;
+    }
+     #wraps:checked ~ #wraps-sub {
+      display: grid;
+    }
+    #wings:checked ~ .menu-container {
+      display: none;
+    }
+    #wings:checked ~ #wings-sub {
+      display: grid;
+    }
+  
+
+    
+    .sub-card {
+      background: linear-gradient(to bottom, #FF0000, #FFFF00);
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      overflow: hidden;
+      width: 250px;
+      transition: transform 0.2s;
+      height: 425px;
+      display: flex;
+      flex-direction: column;
+    }
+    .sub-card:hover {
+      transform: scale(1.03);
+    }
+    .sub-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+
+    }
+    #margherita-sub .sub-card img {
+      /* transform: scaleY(4); */
+    }
+    .back-button {
+      background-color: #333333;
+      color: rgb(255, 255, 255);
+      border: none;
+      padding: 6px 6px;
+      border-radius: 7px;
+      cursor: pointer;
+      margin: 20px auto;
+      font-size: 15px;
+      font-style: italic;
+      width: 300px;
+      display: block;
+      position: static;
+    }
+    .back-button:hover {
+      background-color: #060303;
+    }
+    input[type="radio"] {
+      display: none;
+    }
+    #none:checked ~ .back-button {
+      display: none;
+    }
+    .margheritasub-img{
+      /* transform: scaleY(1.6) */
+
+    }
+      .MediumMargherita-img{
+      /* transform: scaleY(1.4) */
+         }
+    
+  .Tacoelpastor-img{
+         /* transform: scaleY(1.4) */
+  }
+      .vegietaco-img{
+           /* transform: scaleY(1.6) */
+      }
+
+
+.marg-img{
+  /* transform: scaleY(1.6) */
+}
+  </style>
+</head>
+<body>
+  <div class="hello">
+    <marquee>WELCOME</marquee>
+    </div>
+    <div>
+  <nav>
+    <div class="logo">
+      <img src="https://i.pinimg.com/1200x/c6/cd/7d/c6cd7dbdcc599ed5678fd8977e3d9abb.jpg" alt="Logo" style="height: 50px; width: auto;">
+      </div>
+    <ul>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">À propos</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="https://wa.me/0658859694" target="_blank" class="whatsapp-link"><i class="fab fa-whatsapp"></i></a></li>
+      <li><a href="https://www.instagram.com/ruchdiiii" target="_blank" class="instagram-link"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+    
+  </nav>
+  </div>
+
+<input type="radio" id="none" name="menu" checked>
+<input type="radio" id="margherita" name="menu">
+<input type="radio" id="taco" name="menu">
+<input type="radio" id="burger" name="menu">
+<input type="radio" id="skewers" name="menu">
+<input type="radio" id="wraps" name="menu">
+
+<div class="menu-container first-row">
+    <label for="margherita" class="card">
+       <img src="https://i.pinimg.com/736x/52/36/32/5236327e1023765d6e8bb026c0e98bfe.jpg" alt="Margherita Pizza" class="margherita-img">
+       <div class="card-content">
+         <h3>Margherita</h3>
+         <p>Classic delight with fresh mozzarella, basil & tomato sauce.</p>
+         <div class="price">$8.99</div>
+         <label for="modal-toggle" class="order-btn">Order</label>
+       </div>
+    </label>
+    <label for="taco" class="card">
+       <img src="https://i.pinimg.com/1200x/15/bc/bb/15bcbb2eb0bf4c8ecb00145a973129cd.jpg" alt="Taco" class="taco-img">
+       <div class="card-content">
+         <h3>Taco</h3>
+         <p>Delicious taco with fresh ingredients.</p>
+         <div class="price">$3</div>
+         <label for="modal-toggle" class="order-btn">Order</label>
+       </div>
+    </label>
+</div>
+<div class="menu-container second-row">
+    <label for="burger" class="card">
+       <img src="https://i.pinimg.com/736x/74/89/60/748960013e95d2e993ef293e37e89378.jpg" alt="Burger" class="burger-img">
+       <div class="card-content">
+         <h3>Burger</h3>
+         <p>Juicy beef burger with lettuce, tomato, and cheese.</p>
+         <div class="price">$10.99</div>
+         <label for="modal-toggle" class="order-btn">Order</label>
+       </div>
+    </label>
+    <label for="skewers" class="card">
+       <img src="https://i.pinimg.com/736x/1e/f1/e8/1ef1e8869f180925ba869ac093c36668.jpg" alt="Chicken Skewers" class="chicken-img">
+       <div class="card-content">
+         <h3>Juicy  Chicken Skewers</h3>
+         <p>Tender grilled chicken skewers with herbs and spices.</p>
+         <div class="price">$12.99</div>
+         <label for="modal-toggle" class="order-btn">Order</label>
+       </div>
+    </label>
+    <label for="wraps" class="card">
+       <img src="https://i.pinimg.com/1200x/67/de/00/67de00802bc22ddefa5f25b7d0486a55.jpg" alt="Chicken Wraps" class="chickenwraps-img">
+       <div class="card-content">
+         <h3>Chicken Wraps</h3>
+         <p>Crispy wraps filled with tender chicken and fresh veggies.</p>
+         <div class="price">$10</div>
+         <label for="modal-toggle" class="order-btn">Order</label>
+       </div>
+    </label>
+</div>
+
+<input type="checkbox" id="modal-toggle" style="display:none;">
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <label for="modal-toggle" class="close">&times;</label>
+    <h1>Contactez-Nous</h1>
+    <div class="form-container">
+      <form action="#" method="post">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+        <label for="tel">Numéro de téléphone :</label>
+        <input type="tel" id="tel" name="tel" placeholder="Votre téléphone" required>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" placeholder="Votre message..."></textarea>
+
+        <input type="submit" value="Envoyer">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<label for="none" class="back-button">Back to Main Menu</label>
+
+<div class="sub-cards" id="margherita-sub">
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/48/cc/fb/48ccfbb3d417c84bcf512abc6299c1e3.jpg" alt="Pepperoni Pizza">
+    <div class="card-content">
+      <h3>Pepperoni Pizza</h3>
+      <p>Classic pizza topped with pepperoni slices and cheese.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/15/4d/1f/154d1ffaba0303dded434ca7c5e93d3b.jpg" alt="Hawaiian Pizza">
+    <div class="card-content">
+      <h3>Hawaiian Pizza</h3>
+      <p>Pizza with ham, pineapple, and cheese.</p>
+      <div class="price">$10.49</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/2a/5b/bb/2a5bbbe70a2b004ee0c9ec7f3fce1894.jpg" alt="Veggie Pizza">
+    <div class="card-content">
+      <h3>Veggie Pizza</h3>
+      <p>Loaded with bell peppers, onions, mushrooms, and olives.</p>
+      <div class="price">$8.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/4b/12/e7/4b12e7dbfa52778411f59188b3d88bb2.jpg" alt="Meat Lovers Pizza">
+    <div class="card-content">
+      <h3>Meat Lovers Pizza</h3>
+      <p>Packed with sausage, bacon, pepperoni, and ground beef.</p>
+      <div class="price">$11.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/f0/50/e7/f050e7867ef535c50ae981d0fc793ca9.jpg" alt="Margherita Pizza">
+    <div class="card-content">
+      <h3>Margherita Pizza</h3>
+      <p>Fresh mozzarella, basil, and tomato sauce.</p>
+      <div class="price">$8.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/d3/c6/99/d3c6998f870ee12c7ea21bb23374938a.jpg" alt="BBQ Chicken Pizza">
+    <div class="card-content">
+      <h3>BBQ Chicken Pizza</h3>
+      <p>Grilled chicken with BBQ sauce, red onions, and cilantro.</p>
+      <div class="price">$10.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/9f/b2/bd/9fb2bdddafdb2555e9992a02dd2a90da.jpg" alt="Supreme Pizza">
+    <div class="card-content">
+      <h3>Supreme Pizza</h3>
+      <p>Topped with pepperoni, sausage, bell peppers, onions, and olives.</p>
+      <div class="price">$11.49</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/30/3c/9c/303c9cbf33cb649550419c6dbac71eda.jpg" alt="Cheese Pizza">
+    <div class="card-content">
+      <h3>Cheese Pizza</h3>
+      <p>Simple and delicious with extra cheese.</p>
+      <div class="price">$7.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/1e/17/31/1e1731db7bed3a2efe244c242da54ba7.jpg" alt="Buffalo Chicken Pizza">
+    <div class="card-content">
+      <h3>Buffalo Chicken Pizza</h3>
+      <p>Spicy buffalo chicken with ranch or blue cheese.</p>
+      <div class="price">$10.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/d8/47/77/d847777c94e32b86cb3bb6d4bbf3a1f1.jpg" alt="Special Pizza 1">
+    <div class="card-content">
+      <h3>Special Pizza 1</h3>
+      <p>A delicious special pizza with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/52/c5/cb/52c5cb7b99e2d8f46cb6eb4d8e27d159.jpg" alt="Special Pizza 2">
+    <div class="card-content">
+      <h3>Special Pizza 2</h3>
+      <p>A delicious special pizza with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/51/32/62/5132626833158bf12f8da0523e31ca74.jpg" alt="Special Pizza 3">
+    <div class="card-content">
+      <h3>Special Pizza 3</h3>
+      <p>A delicious special pizza with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/93/d1/70/93d170166ca177efc7a843da75563fec.jpg" alt="Special Pizza 4">
+    <div class="card-content">
+      <h3>Special Pizza 4</h3>
+      <p>A delicious special pizza with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/24/1a/21/241a21757d20bef987786a0b43f26bc4.jpg" alt="Special Pizza 5">
+    <div class="card-content">
+      <h3>Special Pizza 5</h3>
+      <p>A delicious special pizza with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/2e/f3/97/2ef397c79d43b829f7b012df3d2ac3b6.jpg" alt="Special Pizza 6">
+    <div class="card-content">
+      <h3>Special Pizza 6</h3>
+      <p>A delicious special pizza with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/5f/22/7b/5f227b50ca9cf664994cd431345f4fdb.jpg" alt="Special Pizza 7">
+    <div class="card-content">
+      <h3>Special Pizza 7</h3>
+      <p>A delicious special pizza with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/b5/9f/33/b59f33de22810136960b2293915607b6.jpg" alt="Special Pizza 9">
+    <div class="card-content">
+      <h3>Special Pizza 9</h3>
+      <p>A delicious special pizza with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/91/72/89/9172896e86927445606a73cf440f6375.jpg" alt="Special Pizza 10">
+    <div class="card-content">
+      <h3>Special Pizza 10</h3>
+      <p>A delicious special pizza with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/3e/80/69/3e8069ae189d1339d143de6cc81f3305.jpg" alt="Special Pizza 11">
+    <div class="card-content">
+      <h3>Special Pizza 11</h3>
+      <p>A delicious special pizza with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/2e/aa/d8/2eaad87d19af493f73f1a39cdbdb6d8f.jpg" alt="Special Pizza 12">
+    <div class="card-content">
+      <h3>Special Pizza 12</h3>
+      <p>A delicious special pizza with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/f6/e6/bc/f6e6bcad3a897625e1f8b942853e30ab.jpg" alt="Special Pizza 13">
+    <div class="card-content">
+      <h3>Special Pizza 13</h3>
+      <p>A delicious special pizza with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/aa/bb/cc/aabbccdd.jpg" alt="The Special Pizza">
+    <div class="card-content">
+      <h3>The Special Pizza</h3>
+      <p>The ultimate special pizza with premium toppings.</p>
+      <div class="price">$12.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+</div>
+<div class="sub-cards" id="taco-sub">
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/9b/b4/36/9bb43699899eb2fb08f876d30caf6ef8.jpg" alt="Beef Taco">
+    <div class="card-content">
+      <h3>Beef&nbsp;Taco</h3>
+      <p>Delicious beef taco with fresh ingredients.</p>
+      <div class="price">$3.50</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/60/29/22/602922d6e1af95525d78393b29c3e53b.jpg" alt="Tacoelpastor-img" class="Tacoelpastor-img" >
+    <div class="card-content">
+      <h3>&nbsp;taco elpastor</h3>
+      <p>Authentic taco al pastor with marinated pork and pineapple.</p>
+      <div class="price">$3.50</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/cc/b0/19/ccb019321d800954014001ef232bbafd.jpg" alt="Veggie Taco" class="vegietaco-img">
+    <div class="card-content">
+      <h3>Veggie&nbsp;Taco</h3>
+      <p>Healthy veggie taco with fresh vegetables and spices.</p>
+      <div class="price">$3.00</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/cd/2c/6d/cd2c6d44cd1a312afccdecbb4ffd0537.jpg" alt="Carnitas Taco">
+    <div class="card-content">
+      <h3>Carnitas Taco</h3>
+      <p>Slow-cooked pork carnitas with salsa and cilantro.</p>
+      <div class="price">$3.75</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/4f/88/45/4f88459b4d98aadd21d11ee9f5d03762.jpg" alt="Shrimp Taco">
+    <div class="card-content">
+      <h3>Shrimp Taco</h3>
+      <p>Grilled shrimp with cabbage slaw and lime crema.</p>
+      <div class="price">$4.25</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/c2/d2/55/c2d2550f93750bc327b6abb4af211257.jpg" alt="Fish Taco">
+    <div class="card-content">
+      <h3>Fish Taco</h3>
+      <p>Battered fish with pico de gallo and avocado.</p>
+      <div class="price">$4.00</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/dd/61/1b/dd611bf904e573ec6d94b5e06f90fd4b.jpg" alt="Chicken Taco">
+    <div class="card-content">
+      <h3>Chicken Taco</h3>
+      <p>Marinated chicken with onions and cilantro.</p>
+      <div class="price">$3.50</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/bd/bb/3f/bdbb3fab87478b5321a64a9361b222c6.jpg" alt="Barbacoa Taco">
+    <div class="card-content">
+      <h3>Barbacoa Taco</h3>
+      <p>Slow-cooked beef barbacoa with radish and lime.</p>
+      <div class="price">$4.00</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/61/3b/42/613b42d3e35f7169b94e4be83a49bc13.jpg" alt="Chorizo Taco">
+    <div class="card-content">
+      <h3>Chorizo Taco</h3>
+      <p>Spicy chorizo sausage with potatoes and salsa.</p>
+      <div class="price">$3.75</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/b9/0f/81/b90f816f0c0a8f1c15e4907c804f412e.jpg" alt="Lengua Taco">
+    <div class="card-content">
+      <h3>Lengua Taco</h3>
+      <p>Beef tongue with cilantro and onion.</p>
+      <div class="price">$4.50</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/62/0d/7b/620d7bfdeef68451cf5f824ecbf0374f.jpg" alt="Tripe Taco">
+    <div class="card-content">
+      <h3>Tripe Taco</h3>
+      <p>Cleaned tripe with salsa verde and lime.</p>
+      <div class="price">$4.25</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/a2/56/01/a256014a3a690ffffd653e46284b904e.jpg" alt="Suadero Taco">
+    <div class="card-content">
+      <h3>Suadero Taco</h3>
+      <p>Thinly sliced beef with cilantro and onion.</p>
+      <div class="price">$3.75</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/ca/f2/e9/caf2e91ed42da4337892beeeba823967.jpg" alt="Cabeza Taco">
+    <div class="card-content">
+      <h3>Cabeza Taco</h3>
+      <p>Beef head meat with salsa and cilantro.</p>
+      <div class="price">$4.00</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/93/4b/7e/934b7e3a949965a2e29646611fee4419.jpg" alt="Adobada Taco">
+    <div class="card-content">
+      <h3>Adobada Taco</h3>
+      <p>Marinated pork in adobo sauce with pineapple.</p>
+      <div class="price">$3.75</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+</div>
+<div class="sub-cards" id="burger-sub">
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/ab/99/79/ab9979d5683de2a44df64720106e749f.jpg" alt="Cheese Burger">
+    <div class="card-content">
+      <h3>Cheese&nbsp;Burger</h3>
+      <p>Juicy beef burger with lettuce, tomato, cheese, and condiments.</p>
+      <div class="price">$11.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/6c/99/47/6c994748c1a80f8caaefaa0f5e77af62.jpg" alt="Bacon Burger">
+    <div class="card-content">
+      <h3>Bacon&nbspBurger</h3>
+      <p>Juicy beef burger with crispy bacon, lettuce, tomato, and cheese.</p>
+      <div class="price">$12.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/43/24/f5/4324f5d5b647b7276d32a48135e7573e.jpg" alt="Veggie Burger">
+    <div class="card-content">
+      <h3>Veggie&nbsp;Burger</h3>
+      <p>Healthy veggie patty burger with lettuce, tomato, and condiments.</p>
+      <div class="price">$10.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/2c/68/99/2c6899b1124bb11003cf08746a70ae62.jpg" alt="Special Burger 1">
+    <div class="card-content">
+      <h3>Special Burger 1</h3>
+      <p>A delicious special burger with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/d6/81/43/d6814306d77ec9e65243ba8f8f5905c5.jpg" alt="Special Burger 2">
+    <div class="card-content">
+      <h3>Special Burger 2</h3>
+      <p>A delicious special burger with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/80/a6/03/80a60342609d6e3a46bf9e7c06bd2ccf.jpg" alt="Special Burger 3">
+    <div class="card-content">
+      <h3>Special Burger 3</h3>
+      <p>A delicious special burger with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/39/0a/5d/390a5d0bd6cc1554a49e31cb9f9ef8e5.jpg" alt="Special Burger 4">
+    <div class="card-content">
+      <h3>Special Burger 4</h3>
+      <p>A delicious special burger with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/94/36/89/94368972091958aefecb7bce8987523a.jpg" alt="Special Burger 5">
+    <div class="card-content">
+      <h3>Special Burger 5</h3>
+      <p>A delicious special burger with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/5a/20/63/5a2063366bdb12fc4b3ebbdeeaf5b783.jpg" alt="Special Burger 6">
+    <div class="card-content">
+      <h3>Special Burger 6</h3>
+      <p>A delicious special burger with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/85/e3/e1/85e3e11e20a3e4a3635eca6da78170fb.jpg" alt="Special Burger 7">
+    <div class="card-content">
+      <h3>Special Burger 7</h3>
+      <p>A delicious special burger with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/33/62/4e/33624e2d91dbf7716e349413d41ddf18.jpg" alt="Special Burger 8">
+    <div class="card-content">
+      <h3>Special Burger 8</h3>
+      <p>A delicious special burger with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/82/30/87/8230875cb0f189e3acdf3863ff147026.jpg" alt="Special Burger 9">
+    <div class="card-content">
+      <h3>Special Burger 9</h3>
+      <p>A delicious special burger with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/f6/1e/bd/f61ebdd84ffe5547f201930c9236982d.jpg" alt="Special Burger 10">
+    <div class="card-content">
+      <h3>Special Burger 10</h3>
+      <p>A delicious special burger with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/9e/f3/57/9ef357bd8f1f383285268a488b3c23bf.jpg" alt="Special Burger 11">
+    <div class="card-content">
+      <h3>Special Burger 11</h3>
+      <p>A delicious special burger with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/9c/84/a5/9c84a51ccf609d2522f8ca236375c4fa.jpg" alt="Special Burger 12">
+    <div class="card-content">
+      <h3>Special Burger 12</h3>
+      <p>A delicious special burger with unique toppings.</p>
+      <div class="price">$9.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+</div>
+<div class="sub-cards" id="skewers-sub">
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/16/38/8c/16388c88e53e37740c11ce1ca705296f.jpg" alt="6 Skewers">
+    <div class="card-content">
+      <h3>6 Skewers</h3>
+      <p>6 tender grilled chicken skewers with herbs and spices.</p>
+      <div class="price">$12.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/41/b0/0d/41b00d8f64e6fa0642e62268e517b0f0.jpg" alt="10 Skewers">
+    <div class="card-content">
+      <h3>10 Skewers</h3>
+      <p>10 tender grilled chicken skewers with herbs and spices.</p>
+      <div class="price">$18.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/a2/bc/b6/a2bcb62f8e6008bc77ad2a02107cf0b7.jpg" alt="15 Skewers">
+    <div class="card-content">
+      <h3>15 Skewers</h3>
+      <p>15 tender grilled chicken skewers with herbs and spices.</p>
+      <div class="price">$24.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/2e/5e/df/2e5edf0684cf9ce7e9076a5634be9880.jpg" alt="Beef Skewers">
+    <div class="card-content">
+      <h3>Beef Skewers</h3>
+      <p>Grilled beef skewers marinated in garlic and herbs.</p>
+      <div class="price">$14.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/1d/02/18/1d02184d40218caebbc8c96e1cf1302b.jpg" alt="Lamb Skewers">
+    <div class="card-content">
+      <h3>Lamb Skewers</h3>
+      <p>Tender lamb skewers with rosemary and mint.</p>
+      <div class="price">$15.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/da/02/6b/da026bcd8341a334745950268ef90b67.jpg" alt="Veggie Skewers">
+    <div class="card-content">
+      <h3>Veggie Skewers</h3>
+      <p>Mixed vegetable skewers with zucchini, bell peppers, and onions.</p>
+      <div class="price">$11.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/93/84/23/9384231c1941611c2d6dced5e9271fbd.jpg" alt="Shrimp Skewers">
+    <div class="card-content">
+      <h3>Shrimp Skewers</h3>
+      <p>Grilled shrimp skewers with lemon and garlic butter.</p>
+      <div class="price">$16.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/10/c1/bd/10c1bdb60e40a4ba2f5bf1d72e01a4c4.jpg" alt="Chicken Tikka Skewers">
+    <div class="card-content">
+      <h3>Chicken Tikka Skewers</h3>
+      <p>Spicy chicken tikka skewers with yogurt marinade.</p>
+      <div class="price">$13.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/f4/19/9d/f4199dbe8106485ca1988f1cd158e4af.jpg" alt="Pork Skewers">
+    <div class="card-content">
+      <h3>Pork Skewers</h3>
+      <p>Juicy pork skewers with teriyaki glaze.</p>
+      <div class="price">$14.49</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/0c/a4/b9/0ca4b95dd3687872fb49bdd1f7a7e1d4.jpg" alt="Halloumi Skewers">
+    <div class="card-content">
+      <h3>Halloumi Skewers</h3>
+      <p>Grilled halloumi cheese skewers with cherry tomatoes.</p>
+      <div class="price">$12.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/09/27/18/092718dc91a8fb32bc57a12bd8838bbd.jpg" alt="Tuna Skewers">
+    <div class="card-content">
+      <h3>Tuna Skewers</h3>
+      <p>Fresh tuna skewers with sesame seeds and soy sauce.</p>
+      <div class="price">$17.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/6e/f7/cc/6ef7ccd6d27af7047e21efa773e193db.jpg" alt="Mushroom Skewers">
+    <div class="card-content">
+      <h3>Mushroom Skewers</h3>
+      <p>Stuffed mushroom skewers with herbs and cheese.</p>
+      <div class="price">$11.49</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/46/43/7a/46437afc8663fa453570f2a40b76e9a9.jpg" alt="Turkey Skewers">
+    <div class="card-content">
+      <h3>Turkey Skewers</h3>
+      <p>Lean turkey skewers with cranberry glaze.</p>
+      <div class="price">$13.49</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/ec/d6/dc/ecd6dc3289876f7c642e9780758e6004.jpg" alt="Salmon Skewers">
+    <div class="card-content">
+      <h3>Salmon Skewers</h3>
+      <p>Grilled salmon skewers with dill and lemon.</p>
+      <div class="price">$16.49</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/1e/f1/e8/1ef1e8869f180925ba869ac093c36668.jpg" alt="Mixed Meat Skewers">
+    <div class="card-content">
+      <h3>Mixed Meat Skewers</h3>
+      <p>Assortment of beef, chicken, and lamb skewers.</p>
+      <div class="price">$18.99</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+</div>
+<div class="sub-cards" id="wraps-sub">
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/76/6e/aa/766eaab13c2757a378662d15493f27b3.jpg" alt="Chicken Wrap">
+    <div class="card-content">
+      <h3>Chicken Wrap</h3>
+      <p>Crispy wrap filled with tender chicken and fresh veggies.</p>
+      <div class="price">$9.00</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/ee/0e/d5/ee0ed5823e9b3bed2d6dd9388e068a63.jpg" alt="Beef Wrap">
+    <div class="card-content">
+      <h3>Beef Wrap</h3>
+      <p>Crispy wrap filled with juicy beef and fresh veggies.</p>
+      <div class="price">$9.50</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/7a/35/60/7a35602b534586fddb3bff0a303fe21f.jpg" alt="Veggie Wrap">
+    <div class="card-content">
+      <h3>Veggie Wrap</h3>
+      <p>Crispy wrap filled with fresh vegetables and spices.</p>
+      <div class="price">$8.50</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/0a/68/f8/0a68f8f08ec8df267749d73227fe3631.jpg" alt="Chicken Wrap Variant 1">
+    <div class="card-content">
+      <h3>Chicken Wrap Variant 1</h3>
+      <p>Crispy wrap filled with tender chicken and fresh veggies.</p>
+      <div class="price">$9.00</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/1d/da/53/1dda539fde2bf593d67e608cf62f3a9d.jpg" alt="Chicken Wrap Variant 2">
+    <div class="card-content">
+      <h3>Chicken Wrap Variant 2</h3>
+      <p>Crispy wrap filled with tender chicken and fresh veggies.</p>
+      <div class="price">$9.00</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/85/e5/33/85e5335155668a307baaa41ef0d5f2cf.jpg" alt="Chicken Wrap Variant 3">
+    <div class="card-content">
+      <h3>Chicken Wrap Variant 3</h3>
+      <p>Crispy wrap filled with tender chicken and fresh veggies.</p>
+      <div class="price">$9.00</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/ee/19/28/ee192841317aa2e080b124d2c0fbe04d.jpg" alt="Chicken Wrap Variant 4">
+    <div class="card-content">
+      <h3>Chicken Wrap Variant 4</h3>
+      <p>Crispy wrap filled with tender chicken and fresh veggies.</p>
+      <div class="price">$9.00</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/1200x/82/65/57/826557bfb523f2b414ee93c321e40f56.jpg" alt="Chicken Wrap Variant 5">
+    <div class="card-content">
+      <h3>Chicken Wrap Variant 5</h3>
+      <p>Crispy wrap filled with tender chicken and fresh veggies.</p>
+      <div class="price">$9.00</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/d0/ae/27/d0ae27c95fa7260bd9656d8343912b7c.jpg" alt="Chicken Wrap Variant 6">
+    <div class="card-content">
+      <h3>Chicken Wrap Variant 6</h3>
+      <p>Crispy wrap filled with tender chicken and fresh veggies.</p>
+      <div class="price">$9.00</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/91/56/3e/91563ee9a04be1a367355fb44b6e883a.jpg" alt="Chicken Wrap Variant 7">
+    <div class="card-content">
+      <h3>Chicken Wrap Variant 7</h3>
+      <p>Crispy wrap filled with tender chicken and fresh veggies.</p>
+      <div class="price">$9.00</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+  <div class="sub-card">
+    <img src="https://i.pinimg.com/736x/b7/53/66/b753669b10e28c74fb18d94e07c50bfc.jpg" alt="Chicken Wrap Variant 8">
+    <div class="card-content">
+      <h3>Chicken Wrap Variant 8</h3>
+      <p>Crispy wrap filled with tender chicken and fresh veggies.</p>
+      <div class="price">$9.00</div>
+      <label for="modal-toggle" class="order-btn">Order</label>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
