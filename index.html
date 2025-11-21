@@ -296,6 +296,57 @@
       }
     }
 
+    /* Hamburger Menu Styles */
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px 20px;
+      position: relative;
+    }
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #ffffff;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 15px;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: #2E7D32;
+    }
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        padding: 10px 0;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .nav-links a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #333;
+      }
+    }
+
     @media (min-width: 1200px) {
       .card {
         width: 280px;
@@ -408,6 +459,31 @@
       width: 90%;
       max-width: 300px;
       margin: 20px auto;
+    }
+
+    /* Hide sub-cards by default */
+    .sub-cards {
+      display: none;
+      margin-left: 15px; /* optional indent */
+    }
+
+    /* Style for main cards */
+    .main-card {
+      cursor: pointer;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    /* Mobile view stacking is automatic if width 100% */
+    @media screen and (max-width: 768px) {
+      .main-card {
+        width: 100%;
+      }
+
+      .sub-card {
+        margin-bottom: 5px;
+      }
     }
   </style>
   <style>
@@ -677,28 +753,28 @@
         devtools.open = false;
       }
     }, 500);
+
+    // Hamburger menu toggle function
+    function toggleNav() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('show');
+    }
   </script>
 </head>
 <body>
   <div class="hello">
     <marquee>WELCOME</marquee>
     </div>
-    <div>
-  <nav>
-    <div class="logo">
-      <img src="https://i.pinimg.com/1200x/c6/cd/7d/c6cd7dbdcc599ed5678fd8977e3d9abb.jpg" alt="Logo" style="height: 50px; width: auto;">
+    <div class="navbar">
+      <span class="hamburger" onclick="toggleNav()">☰</span>
+      <div class="nav-links" id="navLinks">
+        <a href="#accueil">Accueil</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="https://wa.me/212658859694" class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/ruchdiiii?igsh=MTRwaG9kMzN6Zjd5OA==" class="instagram-link"><i class="fab fa-instagram"></i></a>
       </div>
-    <ul>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">À propos</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="https://wa.me/0658859694" target="_blank" class="whatsapp-link"><i class="fab fa-whatsapp"></i></a></li>
-      <li><a href="https://www.instagram.com/ruchdiiii" target="_blank" class="instagram-link"><i class="fab fa-instagram"></i></a></li>
-    </ul>
-    
-  </nav>
-  </div>
+    </div>
 
 <input type="radio" id="none" name="menu" checked>
 <input type="radio" id="margherita" name="menu">
@@ -1492,5 +1568,3 @@
 
 </body>
 </html>
-
-
