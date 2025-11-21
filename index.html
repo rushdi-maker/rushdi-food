@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Moderne</title>
+  <title> Moderne's menu rushdi's food </title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     
@@ -324,13 +323,12 @@
       max-width: 500px;
       width: 90%;
       margin: 40px auto;
-      padding: 20px;
+      padding: 25px;
       border-radius: 15px;
       font-style: italic;
-      background-image: url('https://i.pinimg.com/736x/9c/a2/f0/9ca2f060b65c185b83cd02addf357a05.jpg');
-      background-size: 100% 100%;
-      background-position: center;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      background: linear-gradient(to bottom, #FF0000, #FFFF00);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      font-family: Arial, sans-serif;
     }
     label, p {
       display: block;
@@ -345,10 +343,10 @@
     select {
       width: 100%;
       padding: 10px;
-      border: 1px solid #8a2525;
+      border: 1px solid #ccc;
       border-radius: 12px;
-      background-color: #333333;
-      color: #ffffff;
+      background-color: #ffffff;
+      color: #333333;
       margin-top: 5px;
       margin-bottom: 15px;
     }
@@ -360,20 +358,20 @@
     textarea:focus,
     select:focus {
       outline: none;
-      border-color: #7b2a2a;
-      background-color: #e8e1e1;
+      border-color: #2E7D32;
+      background-color: #f9f9f9;
     }
     input[type="submit"] {
-      background-color: #E53935;
-      color: #fff6f6;
+      background-color: #2E7D32;
+      color: #ffffff;
       padding: 10px 20px;
       border: none;
       border-radius: 12px;
       cursor: pointer;
-      transition: background-color 2s ease;
+      transition: background-color 0.3s ease;
     }
     input[type="submit"]:hover {
-      background-color: #2E7D32;
+      background-color: #1B5E20;
     }
     #message {
       font-style: italic;
@@ -519,6 +517,34 @@
   /* transform: scaleY(1.6) */
 }
   </style>
+  <script>
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    // Disable F12, Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'F12' || (e.ctrlKey && e.key === 'u') || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C'))) {
+        e.preventDefault();
+        alert('Developer tools are disabled on this site.');
+      }
+    });
+
+    // Additional measures to detect and close dev tools (not foolproof)
+    let devtools = {open: false, orientation: null};
+    const threshold = 160;
+    setInterval(() => {
+      if (window.outerHeight - window.innerHeight > threshold || window.outerWidth - window.innerWidth > threshold) {
+        if (!devtools.open) {
+          devtools.open = true;
+          alert('Developer tools detected. Please close them.');
+        }
+      } else {
+        devtools.open = false;
+      }
+    }, 500);
+  </script>
 </head>
 <body>
   <div class="hello">
@@ -600,7 +626,7 @@
 <div id="myModal" class="modal">
   <div class="modal-content">
     <label for="modal-toggle" class="close">&times;</label>
-    <h1>Contactez-Nous</h1>
+    <h1>Passer Commande</h1>
     <div class="form-container">
       <form action="#" method="post">
         <label for="name">Nom :</label>
@@ -609,16 +635,16 @@
         <label for="prenom">Prénom :</label>
         <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" placeholder="Votre email" required>
-
         <label for="tel">Numéro de téléphone :</label>
         <input type="tel" id="tel" name="tel" placeholder="Votre téléphone" required>
 
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" placeholder="Votre message..."></textarea>
+        <label for="address">Adresse de livraison :</label>
+        <input type="text" id="address" name="address" placeholder="Votre adresse (si livraison)">
 
-        <input type="submit" value="Envoyer">
+        <label for="special_instructions">Instructions spéciales :</label>
+        <textarea id="special_instructions" name="special_instructions" placeholder="Allergies, demandes spéciales..."></textarea>
+
+        <input type="submit" value="Commander">
       </form>
     </div>
   </div>
@@ -817,15 +843,7 @@
       <label for="modal-toggle" class="order-btn">Order</label>
     </div>
   </div>
-  <div class="sub-card">
-    <img src="https://i.pinimg.com/736x/aa/bb/cc/aabbccdd.jpg" alt="The Special Pizza">
-    <div class="card-content">
-      <h3>The Special Pizza</h3>
-      <p>The ultimate special pizza with premium toppings.</p>
-      <div class="price">$12.99</div>
-      <label for="modal-toggle" class="order-btn">Order</label>
-    </div>
-  </div>
+
 </div>
 <div class="sub-cards" id="taco-sub">
   <div class="sub-card">
@@ -1341,3 +1359,4 @@
 
 </body>
 </html>
+
