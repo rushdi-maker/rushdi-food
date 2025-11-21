@@ -1,4 +1,5 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -260,6 +261,42 @@
       }
     }
 
+    @media (max-width: 320px) {
+      .menu-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 0 10px;
+      }
+      .card {
+        width: 200px;
+        max-width: 100%;
+      }
+      .sub-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .sub-card {
+        width: 200px;
+        max-width: 100%;
+      }
+      nav ul {
+        flex-direction: row;
+      }
+      nav li {
+        margin: 0 5px;
+      }
+      .logo {
+        position: absolute;
+        left: 10px;
+      }
+      nav {
+        flex-direction: row;
+      }
+      body {
+        padding: 10px;
+      }
+    }
+
     @media (min-width: 1200px) {
       .card {
         width: 280px;
@@ -293,6 +330,39 @@
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
+      }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1200px) {
+      .menu-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .card {
+        width: 250px;
+      }
+      .sub-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .sub-card {
+        width: 250px;
+      }
+      nav {
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .menu-container {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .card {
+        width: 280px;
+      }
+      .sub-cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .sub-card {
+        width: 280px;
       }
     }
   </style>
