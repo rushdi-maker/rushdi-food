@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -39,6 +39,7 @@
       align-items: center;
       padding: 0 20px;
       text-decoration: none;
+      flex-wrap: wrap;
     }
     .logo {
       flex-shrink: 0;
@@ -274,6 +275,24 @@
       }
       .sub-cards {
         grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
       }
     }
   </style>
